@@ -6,8 +6,8 @@ module.exports = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "camilo86", // Usually your GitHub org/user name.
+  projectName: "engl-582-project", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "ENGL-582 Project",
