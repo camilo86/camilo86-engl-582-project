@@ -32,12 +32,10 @@ I will build and assess three methods of hate speech detection:
 
 - Denylist of common hate speech words
   - [Popular denylist used and mantained by Shutterstock](https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words)
-- Sentiment and emotion analysis
+- Sentiment anylisis (VADER)
   - NLTK’s VADER for social media sentiment anaylysis
-  - JAMMIN tool for emotion analysis
-  - Average negative of these two systems determine hate speech classification
-- NLTK text classifier
   - [Trained using pre-labeled dataset](https://github.com/ZeerakW/hatespeech)
+- BERT Text classification
 
 Once these three systems are built, I will test each system against a dataset that contains both [hate and non-hate
 speech](https://github.com/t-davidson/hate-speech-and-offensive-language)
