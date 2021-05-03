@@ -2,9 +2,7 @@
 layout: home
 ---
 
-> **Note:** Project still in review
-
-# Analysing the effectiveness of denylist, sentiment analysis and text classification in hate speech detection
+# Analysing the effectiveness and bias of denylist, sentiment analysis (VADER) and BERT text classification in hate speech detection
 
 By: Camilo Gonzalez ([cxg7732@rit.edu](mailto:cxg7732@rit.edu))
 
