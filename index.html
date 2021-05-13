@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>ENGL 582 Project | Final project for RIT’s ENGL 582 course</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="ENGL 582 Project" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Final project for RIT’s ENGL 582 course" />
+<meta property="og:description" content="Final project for RIT’s ENGL 582 course" />
+<link rel="canonical" href="/" />
+<meta property="og:url" content="/" />
+<meta property="og:site_name" content="ENGL 582 Project" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ENGL 582 Project" />
+<script type="application/ld+json">
+{"description":"Final project for RIT’s ENGL 582 course","url":"/","@type":"WebSite","name":"ENGL 582 Project","headline":"ENGL 582 Project","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ENGL 582 Project" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">ENGL 582 Project</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/demo.html">Demo</a><a class="page-link" href="/finalreport.html">Final report</a><a class="page-link" href="/presentations.html">Presentations</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home"><h1 id="analysing-the-effectiveness-and-bias-of-denylist-sentiment-analysis-vader-and-bert-text-classification-in-hate-speech-detection">Analysing the effectiveness and bias of denylist, sentiment analysis (VADER) and BERT text classification in hate speech detection</h1>
+
+<p>By: Camilo Gonzalez (<a href="mailto:cxg7732@rit.edu">cxg7732@rit.edu</a>)</p>
+
+<h2 id="intro">Intro</h2>
+
+<p>In this project, I will be assessing three standard methods of hate speech detection (denylist, sentiment analysis, and
+text classification). I will be running each detection method through a dataset to understand their performance at
+detecting hate speech and how they stack up against other existing methods.</p>
+
+<p>Using these results, I hope to shine some light into the effectiveness of these systems, and hopefully find ways in
+which these systems can be leveraged to be more powerful at identifying different types hate speech online.</p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>Social media has made our world smaller. With a push of a button, you can share your thoughts with millions of
+people all around the world. Unfortunately, the same technology that has brought us together is also being used to
+amplify hate, disinformation, and to radicalize.</p>
+
+<p>Although the tech sector is aware of the hate speech problem, and is actively building new tools to mitigate the
+issue, the current methods are not enough.</p>
+
+<h2 id="method">Method</h2>
+
+<p>I will build and assess three methods of hate speech detection:</p>
+
+<ul>
+  <li>Denylist of common hate speech words
+    <ul>
+      <li><a href="https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words">Popular denylist used and mantained by Shutterstock</a></li>
+    </ul>
+  </li>
+  <li>Sentiment anylisis (VADER)
+    <ul>
+      <li>NLTK’s VADER for social media sentiment anaylysis</li>
+      <li><a href="https://github.com/ZeerakW/hatespeech">Trained using pre-labeled dataset</a></li>
+    </ul>
+  </li>
+  <li>BERT Text classification</li>
+</ul>
+
+<p>Once these three systems are built, I will test each system against a dataset that contains both <a href="https://github.com/t-davidson/hate-speech-and-offensive-language">hate and non-hate
+speech</a></p>
+
+<h2 id="experimental-design">Experimental Design</h2>
+
+<p>I will record how each system classified each word in the dataset and compare it against the actual hate-speech label
+in the dataset. I will calculate how many words were classified correctly, false positives and false negatives.</p>
+
+<p>Once the data is collected, I will be able analyse the results and answer the following questions:</p>
+
+<ul>
+  <li>Which system performs best overall?</li>
+  <li>What categories of hate speech were easiest/hardest to categorize overall?</li>
+  <li>Are any of these systems better at identifying a specific type of hate speech than others? If so, why?</li>
+</ul>
+
+<h2 id="data">Data</h2>
+
+<p>There are a few datasets needed to create the three systems and to test them.</p>
+
+<ul>
+  <li><a href="https://github.com/t-davidson/hate-speech-and-offensive-language">”List of dirty naughty obscene, and otherwise bad words” set will be used as the denylist for the first system.
+This list is very popular and has already been integrated in Overstock application for image label review and
+into many open source tools for developer</a></li>
+  <li><a href="https://github.com/ZeerakW/hatespeech">”Hateful people or hateful symbols” set will be used to create the text classifier system. This dataset is
+composed of problematic tweets along with user profile name and bio, and was published by the Association
+for Computational Linguistics</a></li>
+  <li><a href="https://github.com/t-davidson/hate-speech-andoffensive-language">”Hate speech and offensive language” set will be used to test each of the three systems. This set contains
+text extracted from problematic tweets and Facebook posts, and was presented in the proceedings of the
+11th Internation AAAI conference on web and social media</a></li>
+</ul>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">ENGL 582 Project</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">ENGL 582 Project</li><li><a class="u-email" href="mailto:cxg7732@rit.edu">cxg7732@rit.edu</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/camilo86"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">camilo86</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Final project for RIT&#39;s ENGL 582 course</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
